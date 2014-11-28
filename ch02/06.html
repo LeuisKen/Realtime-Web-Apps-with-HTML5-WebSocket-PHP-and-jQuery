@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Trying out the WebSocket API 02-06</title>
+</head>
+<body>
+	<script>
+		var ws = new WebSocket('ws://echo.websocket.org');
+
+		ws.open = function(){
+			console.log('connected');
+			console.log('> hello');
+			ws.send('hello');
+		};
+		ws.onmessage = function(ev){
+			console.log('< ' + ev.data);
+		};
+		ws.onclose = function(){
+			console.log('closed');
+		};
+		ws.onerror = function(){
+			console.log('error');
+		};
+	</script>
+</body>
+</html>
