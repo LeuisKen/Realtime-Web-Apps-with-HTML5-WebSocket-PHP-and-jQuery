@@ -1,0 +1,163 @@
+/**
+ * Styles for the Realtime Q&A app
+ */
+
+/*
+fonts.com font-family rules.
+
+Cooper Black
+font-family:'Cooper Black W01';
+
+News Gothic:
+font-family:'NewsGothicNo2W01-Thin';
+font-family:'NewsGothicNo2W01-ThinIt';
+font-family:'NewsGothicNo2W01-Light';
+font-family:'NewsGothicNo2W01-LightI';
+font-family:'NewsGothicNo2W01-Roman';
+font-family:'News Gothic No.2 W01 It';
+font-family:'NewsGothicNo2W01-Medium_710407';
+font-family:'NewsGothicNo2W01-Medium_710410';
+font-family:'NewsGothicNo2W01-Bold';
+font-family:'NewsGothicNo2W01-BoldIt';
+font-family:'NewsGothicNo2W01-Blk';
+font-family:'NewsGothicNo2W01-BlkIt';
+*/
+
+/* Basic Font Styles
+ ----------------------------------------------------------------------------*/
+
+body{
+	font: 18px/24px 'NewsGothicNo2W01-Roman';
+	color: #1f1b0c;
+	letter-spacing: .06em;
+}
+h1{
+	font-family: 'Cooper Black W01';
+	font-weight: normal; 
+}
+h1{
+	margin: 0;
+	color: #fbf7e7;
+	font-size: 6em;
+	line-height: 1em;
+	letter-spacing: -.1em;
+}
+.tagline{
+	font-family: 'NewsGothicNo2W01-Light';
+	font-size: 1.1em;
+	line-height: 1em;
+	color: #fbf7e7;
+	letter-spacing: .12em;
+}
+a{
+	font-family: 'NewsGothicNo2W01-Medium_710407';
+	color: #e06f00;
+	text-decoration: none;
+}
+a:active,a:hover,a:focus{
+	text-decoration: underline;
+	outline: none;
+}
+footer li{
+	font-family: 'NewsGothicNo2W01-Light';
+	font-size: .75em;
+	line-height: 1em;
+	letter-spacing: .04em;
+	color: #fbf7e7;
+}
+footer li em{
+	font-family: 'NewsGothicNo2W01-Light';
+	font-style: normal;
+}
+
+/* Layout
+ ----------------------------------------------------------------------------*/
+
+html{
+	background-color: #fbf7e7;
+}
+body{
+	margin: 0;
+}
+header,footer,input,li:after{
+	box-shadow: 0 0 10px rgba(31, 27, 12, .3);
+}
+header,footer{
+	overflow: hidden;
+	background: #1f1b0c;
+	margin: 0;
+	padding: 1em;
+	text-align: center;
+}
+header{
+	margin-bottom: 3em;
+	padding: 3em 0 2em;
+}
+header h1,header p{
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+header h1{
+	margin-bottom: .25em;
+}
+footer{
+	margin-top: 6em;
+}
+footer ul{
+	overflow: hidden;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+footer li{
+	float: right;
+	margin-left: 1em;
+	list-style: none;
+}
+footer li.copyright{
+	float: left; margin-left: 0;
+}
+
+/* Media queries
+ ----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 960px){
+	header h1,header p{
+		width: 760px;
+	}
+	header{
+		padding: .75em 0 1.2em;
+	}
+	footer{
+		margin-top: 4em; padding: 0;}
+	footer ul{
+		width: 740px;
+	}
+	footer li,footer li.copyright{
+		float: none;
+		margin: .75em 0;
+	}
+}
+@media screen and (max-width: 768px){
+
+	header h1,header p{
+		width: 300px;
+	}
+
+	header{
+		padding-bottom: .75em;
+	}
+
+	header h1{
+		font-size: 2.4em;
+	}
+	footer{
+		margin-top: 3em;
+	}
+
+	footer ul{
+		width: 300px;
+	}
+
+}
