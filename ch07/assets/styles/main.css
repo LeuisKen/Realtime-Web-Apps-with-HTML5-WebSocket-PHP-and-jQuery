@@ -31,7 +31,7 @@ body{
 	color: #1f1b0c;
 	letter-spacing: .06em;
 }
-h1{
+h1,h2{
 	font-family: 'Cooper Black W01';
 	font-weight: normal; 
 }
@@ -41,6 +41,47 @@ h1{
 	font-size: 6em;
 	line-height: 1em;
 	letter-spacing: -.1em;
+}
+h2{
+	text-shadow: 0 0 10px rgba(31, 27, 12, .3);
+}
+h2{
+	margin: 0 0 .5em;
+	font-size: 2.75em;
+	line-height: 1em;
+	letter-spacing: -.08em;
+}
+p{
+	text-align: center;
+}
+form p{
+	margin: 0 0 1em;
+	padding: 0;
+	font-size: 1.375em;
+}
+label{
+	font-family: 'NewsGothicNo2W01-Bold';
+	font-size: .75em;
+	line-height: 1.25em;
+	letter-spacing: .04em;
+}
+input{
+	font-family: 'Cooper Black W01';
+	color: #fbf7e7;
+	background-color: #1f1b0c;
+	border-radius: 6px;
+	border: none;
+	font-size: 1.75em;
+	line-height: 1em;
+	letter-spacing: -.08em;
+	text-shadow: 0 0 10px rgba(31, 27, 12, .3);
+}
+label input{
+	font-family: 'NewsGothicNo2W01-Light';
+	font-size: 1.75em;
+	letter-spacing: .08em;
+	color: #1f1b0c;
+	background-color: #fff;
 }
 .tagline{
 	font-family: 'NewsGothicNo2W01-Light';
@@ -58,6 +99,39 @@ a:active,a:hover,a:focus{
 	text-decoration: underline;
 	outline: none;
 }
+section{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+form{
+	float: left;
+	width: 460px;
+	text-align: center;
+}
+form#attending{
+	float: right;
+}
+label{
+	display: block;
+	width: 430px;
+	margin: 0 auto 1em;
+	text-indent: 2px;
+	text-align: left;
+}
+input{
+	margin: .25em 0 0;
+	padding: .375em .875em;
+}
+label input{
+	display: block;
+	width: 400px;
+	margin: 0;
+	padding: .375em 15px;
+	border: 2px solid #1f1b0c;
+	border-radius: 6px;
+	box-shadow: inset 2px 2px 14px rgba(31, 27, 12, .3);
+}
 footer li{
 	font-family: 'NewsGothicNo2W01-Light';
 	font-size: .75em;
@@ -68,6 +142,25 @@ footer li{
 footer li em{
 	font-family: 'NewsGothicNo2W01-Light';
 	font-style: normal;
+}
+
+/* Highlights
+ ----------------------------------------------------------------------------*/
+
+input:active,input:hover,input:focus{
+	background-color: #e06f00;
+	outline: none;
+}
+input::-moz-focus-inner{
+	border: 0;
+}
+label input:active,label input:focus{
+	border-color: #e06f00;
+	background-color: #fff;
+	outline: none;
+}
+label input:hover{
+	background-color: #fff;
 }
 
 /* Layout
@@ -140,7 +233,6 @@ footer li.copyright{
 	}
 }
 @media screen and (max-width: 768px){
-
 	header h1,header p{
 		width: 300px;
 	}
