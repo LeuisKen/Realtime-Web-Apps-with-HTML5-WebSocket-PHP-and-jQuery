@@ -80,6 +80,7 @@ input{
 	background-color: #1f1b0c;
 	border-radius: 6px;
 	border: none;
+	cursor: pointer;
 	font-size: 1.75em;
 	line-height: 1em;
 	letter-spacing: -.08em;
@@ -293,7 +294,7 @@ form#ask-a-question,#questions{
 	padding: 0;
 	text-align: left;;
 }
-#questions .vote{
+#questions .vote，#questions .answer{
 	position: relative;
 	display: block;
 	width: 76px;
@@ -302,7 +303,7 @@ form#ask-a-question,#questions{
 	padding: 0;
 	overflow: hidden;
 }
-#questions .vote input[type="submit"]{
+#questions .vote input[type="submit"],#questions .answer input[type="submit"]{
 	margin: 0;
 	width: 100%;
 	height: 100%;
@@ -331,6 +332,25 @@ form#ask-a-question,#questions{
 	background-position: left top;
 	cursor: default;
 }
+#questions .answer{
+	float: right;
+	width: 78px;
+	height: 88px;
+	margin: 0;
+}
+#questions .answer input[type="submit"]{
+	background-position: right top;
+}
+#questions .answer input:active,#questions .answer input:hover,#questions .answer input:focus{
+	background-position: right bottom;
+}
+#close-this-room{
+	width: 340px;
+	margin: 2em 0 0;
+}
+#close-this-room label input{
+	width: 305px;
+}
 
 /* Media queries
  ----------------------------------------------------------------------------*/
@@ -345,7 +365,7 @@ form#ask-a-question,#questions{
 	section{
 		width: 740px;
 	}
-	section header{
+	section header,#close-this-room{
 		float: none;
 		width: 680px;
 		margin: 0 auto 1.5em;
@@ -397,6 +417,21 @@ form#ask-a-question,#questions{
 		float: none;
 		margin: .75em 0;
 	}
+	#close-this-room{
+		margin: 1em auto 0;
+	}
+	#close-this-room label{
+		width: 59%;
+		float: left;
+	}
+	#close-this-room label input{
+		width: 88%;
+		margin: 0;
+	}
+	#close-this-room input{
+		float: left;
+		margin: .6em 0 0;
+	}
 }
 @media screen and (max-width: 768px){
 	header h1,header p{
@@ -412,7 +447,7 @@ form#ask-a-question,#questions{
 	header h1{
 		font-size: 2.4em;
 	}
-	form,form#attending,form#ask-a-question{
+	form,form#attending,form#ask-a-question,#close-this-room{
 		float: none;
 		width: 90%;
 		margin: 0 auto 3em;
@@ -427,13 +462,13 @@ form#ask-a-question,#questions{
 		width: 88%;
 		font-size: 1.6em;
 	}
-	#ask-a-question label{
+	#ask-a-question label,#close-this-room label{
 		width: 270px;
 	}
 	#ask-a-question label input{
 		width: 87%;
 	}
-	#ask-a-question input{
+	#ask-a-question input，#close-this-room input{
 		float: none;
 		margin: 0 auto;
 	}
@@ -459,5 +494,14 @@ form#ask-a-question,#questions{
 	footer ul{
 		width: 300px;
 	}
-
+	#close-this-room{
+		margin: 1em auto 0;
+	}
+	#questions.presenter li:before{
+		top: auto;
+		right: 24px;
+		bottom: 6px;
+		left: auto;
+		z-index: 10;
+	}
 }

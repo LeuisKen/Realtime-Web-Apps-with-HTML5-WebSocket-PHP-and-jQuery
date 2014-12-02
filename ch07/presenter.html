@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Realtime Q&amp;A</title>
+	<!-- Fonts via fonts.com -->
+	<script type="text/javascript" src="http://fast.fonts.net/jsapi/52be6e18-908a-4397-a53a-d11f6d6d1496.js"></script>
+	<!-- Main site styles -->
+	<link rel="stylesheet" type="text/css" href="./assets/styles/main.css" />
+</head>
+<body>
+<header>
+	<h1>Realtime Q&amp;A</h1>
+	<p class="tagline">
+		A live feedback system for classes, presentations, and conferences.
+	</p><!-- /.tagline -->
+</header>
+<section>
+	<header>
+		<h2>Realtime Web Apps &amp; the Mobile Internet</h2>
+		<p>
+			Presented by Jason Lengstorf (<a href="mailto:jason@lengstorf.com">email</a>)
+		</p>
+		<form id="close-this-room">
+			<label>
+				Link to your room.
+				<input type="text" name="room-url" value="http://localhost/room/1234" disabled />
+			</label>
+			<input type="submit" value="Close This Room" />
+		</form><!-- /#close-this-room -->
+	</header>
+	<ul id="questions" class="presenter">
+		<li id="question-1" data-count="27">
+			<form class="answer">
+				<input type="submit" value="Answer this question." />
+			</form>
+			<p>
+				What is the best way to implement realtime features today?
+			</p>
+		</li><!-- /#question-1 -->
+		<li id="question-2" data-count="14">
+			<form class="answer">
+				<input type="submit" value="Answer this question." />
+			</form>
+			<p>
+				Does this work on browsers that don't support the WebSockets API?
+			</p>
+		</li><!-- /#question-2 -->
+	</ul><!-- /#questions -->
+</section>
+<footer>
+	<ul>
+		<li class="copyright">
+			&copy; 2013 Jason Lengstorf &amp; Phil Leggetter
+		</li><!-- /.copyright -->
+		<li>
+			Part of <em>Real Web Apps: HTML5 Websockets, Pusher, and the Web&rsquo;s Next Big Thing</em>.
+		</li>
+		<li>
+			<a href="http://amzn.to/XKxBbG">Get the Book</a>
+			<a href="http://cptr.me/UkMSmn">Source Code (on Github)</a>
+		</li>
+	</ul>
+</footer>
+</body>
+</html>
